@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon id="repository.greenflix" name="Green Flix Repository" version="0.1.0" provider-name="Sr. Triste">
     <extension point="xbmc.addon.repository" name="Green Flix Repository">
-        <info compressed="false">https://github.com/seu-usuario/repositorio/raw/main/addons.xml</info>
-        <checksum>https://github.com/seu-usuario/repositorio/raw/main/addons.xml.md5</checksum>
-        <datadir zip="true">https://github.com/seu-usuario/repositorio/raw/main/zip/</datadir>
+        <info compressed="false">https://raw.githubusercontent.com/GreenFli/repo/main/greenflix.xml</info>
+        <checksum>https://raw.githubusercontent.com/GreenFli/repo/main/greenflix.xml.md5</checksum>
+        <datadir zip="true">https://github.com/GreenFli/repo/raw/main/zip/</datadir>
     </extension>
     <extension point="xbmc.addon.metadata">
         <summary>Green Flix Repository</summary>
