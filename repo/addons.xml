@@ -5,9 +5,9 @@
 </requires>
 <extension point="xbmc.addon.repository" name="Green Flix Repository">
 <dir>
-<info compressed="false">https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml</info>
-<checksum>https://raw.githubusercontent.com/Gujal00/smrzips/master/addons.xml.md5</checksum>
-<datadir zip="true">https://raw.githubusercontent.com/Gujal00/smrzips/master/zips/</datadir>
+<info compressed="false">https://raw.githubusercontent.com/GreenFli/repo/main/repo/addons.xml</info>
+<checksum>https://raw.githubusercontent.com/GreenFli/repo/main/repo/addons.xml.md5</checksum>
+<datadir zip="true">https://github.com/GreenFli/repo/raw/main/repo/Plugins/</datadir>
 </dir>
 </extension>
 <extension point="xbmc.addon.metadata">
