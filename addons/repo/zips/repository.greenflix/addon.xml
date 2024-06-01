@@ -4,17 +4,17 @@
         <dir>
             <info compressed="false">https://raw.githubusercontent.com/GreenFli/repo/main/addons/repo/zips/addons.xml</info>
             <checksum>https://raw.githubusercontent.com/GreenFli/repo/main/addons/repo/zips/addons.xml.md5</checksum>
-            <datadir zip="true">https://github.com/GreenFli/repo/raw/main/addons/repo/zips/</datadir>
+            <datadir zip="true">https://raw.githubusercontent.com/GreenFli/repo/raw/main/addons/repo/zips/</datadir>
         </dir>
         <dir minversion="19.9.1" maxversion="20.9.0">
             <info compressed="false">https://raw.githubusercontent.com/GreenFli/repo/main/addons/repo/zips/addons.xml</info>
             <checksum>https://raw.githubusercontent.com/GreenFli/repo/main/addons/repo/zips/addons.xml.md5</checksum>
-            <datadir zip="true">https://github.com/GreenFli/repo/raw/main/addons/repo/zips/</datadir>
+            <datadir zip="true">https://raw.githubusercontent.com/GreenFli/repo/raw/main/addons/repo/zips/</datadir>
         </dir>
         <dir minversion="20.9.1">
             <info compressed="false">https://raw.githubusercontent.com/GreenFli/repo/main/addons/repo/zips/addons.xml</info>
             <checksum>https://raw.githubusercontent.com/GreenFli/repo/main/addons/repo/zips/addons.xml.md5</checksum>
-            <datadir zip="true">https://github.com/GreenFli/repo/raw/main/addons/repo/zips/</datadir>
+            <datadir zip="true">https://raw.githubusercontent.com/GreenFli/repo/raw/main/addons/repo/zips/</datadir>
         </dir>
     </extension>
     <extension point="xbmc.addon.metadata">
