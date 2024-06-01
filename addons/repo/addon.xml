@@ -5,8 +5,8 @@
     </requires>
     <extension point="xbmc.addon.repository" name="Green Flix Repository">
         <dir>
-            <info compressed="false">https://raw.githubusercontent.com/GreenFli/repo/c0c7c603221a07c9f0519d4d18a12d8c669ac4e5/addons/repo/addon.xml</info>
-            <checksum>https://raw.githubusercontent.com/GreenFli/repo/c0c7c603221a07c9f0519d4d18a12d8c669ac4e5/addons/repo/addon.xml.md5</checksum>
+            <info compressed="false">https://raw.githubusercontent.com/GreenFli/repo/c0c7c603221a07c9f0519d4d18a12d8c669ac4e5/addons/repo/addons.xml</info>
+            <checksum>https://raw.githubusercontent.com/GreenFli/repo/c0c7c603221a07c9f0519d4d18a12d8c669ac4e5/addons/repo/addons.xml.md5</checksum>
             <datadir zip="true">https://github.com/GreenFli/repo/raw/c0c7c603221a07c9f0519d4d18a12d8c669ac4e5/addons/repo/Plugins/</datadir>
         </dir>
     </extension>
@@ -18,7 +18,7 @@
             <icon>icon.png</icon>
             <fanart>fanart.jpg</fanart>
         </assets>
-        <summary>Repositório Green Flix</summary>
+        <!-- <summary>Repositório Green Flix</summary> -->
         <description>
             [B][COLOR blue]●[/COLOR] [COLOR white]Repositório oficial do Green Flix - 2024[/COLOR][/B]
             [B][COLOR firebrick]●[/COLOR] [COLOR white]Proibido a venda dos add-ons do Green Flix.[/COLOR][/B]
