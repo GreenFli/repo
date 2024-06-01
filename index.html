@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <title>Green Flix - Repositório Kodi</title>
+    <link rel="icon" type="image/png" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh9TCspNEFax7m_nbu3cgSjPduLO5dVxTm_LYhdP1FNEFDunyKgk72D-FWd8rNMk1z-4p7KqdLqBn1uELeXrKFplR3HaYsr5xdY7QVAm_UotZtlF-7GYQfinh1SHSLFdv96dEYqdMgqjTRZh7dO290nmJIyzJUsCImcOJZj9EZaGHKlSWlHtMILtBNtpcsz/s16000/icon.png" />
+    <meta name="robots" content="noindex">
+    <meta name="googlebot" content="noindex" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani:400,500,700" rel="stylesheet">
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Rajdhani', sans-serif;
+            color: white;
+            overflow-x: hidden;
+            background-color: #71922b; /* Fundo mais escuro */
+        }
+
+        .bg {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: linear-gradient(to bottom, #c82333, #218838); /* Gradiente de cores */
+            opacity: 0.8; /* Opacidade do gradiente */
+            animation: wave 4s linear infinite; /* Animação da onda */
+        }
+
+        @keyframes wave {
+            0% { background-position: 0 0; }
+            100% { background-position: 0 -100%; }
+        }
+
+        .content {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+            background-color: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px); /* Efeito de desfoque no fundo */
+            margin: 10px;
+            border-radius: 15px;
+        }
+
+        .content img {
+            max-width: 60%;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 15px; /* Bordas arredondadas na imagem */
+        }
+
+        .content h1, .content h4 {
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adicionar sombra ao texto */
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px; /* Aumentar espaço entre os botões */
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 25px; /* Aumentar padding */
+            color: white;
+            background-color: #28a745; /* Tom de verde */
+            border-radius: 50px; /* Bordas mais arredondadas */
+            text-transform: uppercase;
+            font-weight: bold;
+            text-decoration: none;
+            transition: background-color 0.3s ease, transform 0.3s ease; /* Adicionar transição de transformação */
+        }
+
+        .button.telegram {
+            background-color: #d63384; /* Tom de rosa escuro */
+        }
+
+        .button:hover {
+            background-color: #c82333; /* Tom de vermelho claro */
+            transform: scale(1.05); /* Aumentar o tamanho ao passar o mouse */
+        }
+
+        .addon-table {
+            display: none; /* Escondido por padrão */
+            width: 80%;
+            margin: 20px auto;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            padding: 20px;
+            overflow-x: auto;
+        }
+
+        .addon-table th, .addon-table td {
+            padding: 10px;
+            text-align: left;
+            color: white;
+        }
+
+        .addon-table a {
+            color: #28a745;
+            text-decoration: none;
+        }
+
+        .addon-table hr {
+            border-top: 1px solid #28a745;
+            margin: 10px 0;
+        }
+
+        .footer {
+            background-color: #1e1e1e;
+            padding: 20px;
+            color: white;
+            text-align: center;
+            border-top: 3px solid #28a745;
+        }
+
+        .go-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            color: #28a745;
+            font-size: 24px;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .go-top:hover {
+            color: #218838;
+            transform: scale(1.2);
+        }
+
+        .input-wrapper {
+            display: flex;
+            justify-content: center;
+        }
+
+        .input-wrapper input {
+            width: 80%;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #28a745;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            text-align: center;
+        }
+    </style>
+    </style>
+</head>
+<body>
+    <div class="bg"></div>
+    <div id="home" class="content animate__animated animate__fadeIn">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgz8KvLhbGlS71kDDfCIMc1XOS2YISVmFeKhOmEWBWEIIsZG5fa8IyKQyb6NYfZbMpytog7YrrPQw0-N7Sjv4UgG2DTa-i1MrtjxFgEhGYOXl0AHbNDtwTDMcx2uFv2X-Zp9MbIlWJ0MgtAXwaSRwlsfrH_tzSSGw2duqPspgljagf5qMZXq-402zSAzDob/s320/icon.png" alt="Logo Green Flix" />
+        <h1>Repositório - Green Flix</h1>
+        <h4>Suporte no Bot do Telegram</h4>
+        <div class="button-container">
+            <a href="https://" class="button" target="_blank">REPOSITÓRIO</a>
+            <a href="https://t.me/GreenFlixS_bot" class="button telegram" target="_blank">Bot Telegram</a>
+        </div>
+    </div>
+    <section id="about" class="content animate__animated animate__fadeIn">
+        <div class="about-thumb">
+            <div class="section-title">
+                <h1 class="wow fadeIn" data-wow-delay="0.2s">Gestor de arquivos</h1>
+                <div class="input-wrapper">
+                    <input id="copy-link" type="text" readonly value="https://greenfli.github.io/repo/" placeholder="https://greenfli.github.io/repo/">
+                </div>
+            </div>
+            <div class="wow fadeInUp" data-wow-delay="0.6s">
+                <span style="color: #28a745;">●</span> Digite o link corretamente. <br />
+                <span style="color: #d63384;">●</span> Proibido a venda do Green Flix. <br />
+                <span style="color: #d63384;">●</span> Não vendemos IPTV, caso ache sites ou mesmo apps é falso.
+            </div>
+        </div>
+        <div class="addon-table">
+            <hr>
+            <p>ADD-ONS:</p>
+            <hr>
+            <table>
+                <tr>
+                    <td><a href="addons/repository.BrazucaPlay.zip">addons/repository.BrazucaPlay.zip</a></td>
+                    <td>V:</td>
+                    <td>1.5</td>
+                </tr>
+                <tr>
+                    <td><a href="addons/plugin.video.BrazucaPlay.zip">addons/plugin.video.BrazucaPlay.zip</a></td>
+                    <td>V:</td>
+                    <td>2.1.4</td>
+                </tr>
+                <tr>
+                    <td><a href="addons/plugin.video.BrazucaPlay.Matrix.zip">addons/plugin.video.BrazucaPlay.Matrix.zip</a></td>
+                    <td>V:</td>
+                    <td>2.1.4</td>
+                </tr>
+            </table>
+            <hr>
+        </div>
+    </section>
+    <footer class="footer">
+        <p>Copyright © 2024 ● Green Flix</p>
+        <p>O autor não se responsabiliza pelo conteúdo encontrado aqui nem o mau uso do mesmo. Nosso add-on funciona apenas como um agregador de links e apenas organiza os mesmos, bem como as sinopses, títulos e outros!</p>
+    </footer>
+    <a href="#home" class="go-top">
+        <i class="fa fa-angle-up"></i>
+    </a>
+    <script src="https://kit.fontawesome.com/73f96667f9.js" crossorigin="anonymous"></script>
+    <script>
+        // Copiar link para a área de transferência
+        document.getElementById('copy-link').addEventListener('click', function() {
+            var linkText = this.value;
+            var tempInput = document.createElement('input');
+            tempInput.value = linkText;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+            alert('Link copiado para a área de transferência: ' + linkText);
+        });
+
+        // Mostrar tabela de add-ons apenas no Kodi
+        if (navigator.userAgent.toLowerCase().indexOf('kodi') > -1) {
+            document.querySelector('.addon-table').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
